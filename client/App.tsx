@@ -9,9 +9,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
+import Product from "./pages/Product";
+import Audition from "./pages/Audition";
 import Contact from "./pages/Contact";
 import JoinTeam from "./pages/JoinTeam";
 import Wholesale from "./pages/Wholesale";
+import CorporateCatering from "./pages/CorporateCatering";
+import Fundraising from "./pages/Fundraising";
 import NotFound from "./pages/NotFound";
 import Placeholder from "./pages/Placeholder";
 import Loading from "./components/Loading";
@@ -50,11 +54,13 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/packs" element={<Placeholder title="Packs" />} />
-            <Route
+            {/* <Route path="/packs" element={<Placeholder title="Packs" />} /> */}
+            <Route path="/packs" element={<Product />} />
+            {/* <Route
               path="/audition"
               element={<Placeholder title="Audition" />}
-            />
+            /> */}
+            <Route path="/audition" element={<Audition />} />
             <Route
               path="/contact"
               // element={<Placeholder title="Contact Us" />}
@@ -72,22 +78,21 @@ const App = () => {
               path="/wholesale"
               element={<Placeholder title="Wholesale" />}
             /> */}
-            <Route
-              path="/wholesale"
-              element={<Wholesale />}
-            />
+            <Route path="/wholesale" element={<Wholesale />} />
             <Route
               path="/franchise"
               element={<Placeholder title="Franchise" />}
             />
-            <Route
+            {/* <Route
               path="/catering"
               element={<Placeholder title="Corporate Catering" />}
-            />
-            <Route
+            /> */}
+            <Route path="/catering" element={<CorporateCatering />} />
+            {/* <Route
               path="/fundraising"
               element={<Placeholder title="Fundraising" />}
-            />
+            /> */}
+            <Route path="/fundraising" element={<Fundraising />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

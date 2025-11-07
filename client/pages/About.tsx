@@ -51,7 +51,7 @@ function StorySection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/9322253434d988a2df693e52d4ba65caa5d957d6?width=876"
               alt="Goooey founder"
-              className="w-full rounded-[42px] transform -rotate-6 hover:rotate-0 transition-transform shadow-2xl"
+              className="w-full rounded-[42px] transform -rotate-6 hover:rotate-0 transition-transform"
             />
           </div>
 
@@ -84,7 +84,7 @@ function StorySection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/65c5b1240398e1ec709a7b4e07175dbd260bcdf5?width=478"
               alt="Product showcase"
-              className="w-48 ml-auto rounded-[42px] border-[3px] border-white transform rotate-6 hover:rotate-0 transition-transform"
+              className="w-48 ml-auto rounded-[42px] transform rotate-6 hover:rotate-0 transition-transform"
             />
           </div>
         </div>
@@ -176,12 +176,12 @@ function WhyGoooeySection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/4f51dfdcd4036b27c251ff76a3f96be1ee66b694?width=848"
               alt="Goooey treats variety"
-              className="w-full rounded-[42px] border-4 border-white transform rotate-6 hover:rotate-0 transition-transform shadow-xl"
+              className="w-full rounded-[42px]  transform rotate-6 hover:rotate-0 transition-transform "
             />
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/15ecb0aad294f76d19893f75b1dfdbb8f94038f3?width=738"
               alt="Making treats"
-              className="w-3/4 ml-auto rounded-[42px] border-4 border-white transform -rotate-6 hover:rotate-0 transition-transform shadow-xl"
+              className="w-3/4 ml-auto rounded-[42px] transform -rotate-6 hover:rotate-0 transition-transform"
             />
           </div>
         </div>
@@ -244,17 +244,11 @@ function MeetFoundersSection() {
               key={index}
               className="relative rounded-[42px] border-[3px] border-white overflow-hidden aspect-[7/8] bg-gradient-to-br from-gray-100 to-gray-200 group hover:scale-105 transition-transform"
             >
-              <img
+              {/* <img
                 src={founder.image}
                 alt={founder.name}
                 className="w-full h-full object-cover"
-              />
-              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm p-6 text-white">
-                <h4 className="font-bold text-xl mb-2">{founder.name}</h4>
-                <p className="text-sm leading-relaxed opacity-90">
-                  {founder.description}
-                </p>
-              </div> */}
+              /> */}
             </div>
           ))}
         </div>
