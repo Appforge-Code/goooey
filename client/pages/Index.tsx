@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { ArrowRight, MoveLeft, MoveRight, Sparkles } from "lucide-react";
+import ReactPlayer from "react-player";
 import eyes from "/Images/Home/eyes.svg";
 import hero from "/Images/Home/hero.png";
 import item from "/Images/Home/Item.png";
@@ -152,8 +153,8 @@ function FeaturedSection() {
           </p>
         </div>
 
-        <div className="relative aspect-video  overflow-hidden">
-          <img src={hero} alt="KTLA 5 Feature" className="object-cover " />
+        <div className="relative flex justify-center items-center aspect-video overflow-hidden">
+          <VimeoPlayer />
         </div>
       </div>
     </section>
@@ -436,21 +437,20 @@ function GallerySection() {
           />
         </svg>
 
-          {/* Main Content */}
-          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-            {/* Image Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-              {images.map((image, index) => (
-                <ImageCard
-                  key={index}
-                  src={image.src}
-                  alt={image.alt}
-                  aspect={image.aspect}
-                  className={image.className}
-                />
-              ))}
-            </div>
+        {/* Main Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Image Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+            {images.map((image, index) => (
+              <ImageCard
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                aspect={image.aspect}
+                className={image.className}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -563,3 +563,16 @@ const ImageCard = ({ src, alt, aspect, className = "" }) => {
   );
 };
 
+function VimeoPlayer() {
+  return (
+    <div className="w-full h-full md:w-[80%] md:h-[80%] rounded-2xl overflow-hidden border-4 border-white">
+      <ReactPlayer
+        src="https://vimeo.com/1088544333"
+        playing
+        controls
+        width="100%"
+        height="100%"
+      />
+    </div>
+  );
+}

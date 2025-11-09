@@ -189,10 +189,10 @@ Sea Salt`}
               </div>
             </div>
             <div className="space-y-6">
-              <div className="flex gap-2 bg-white rounded-full p-1.5 w-fit">
+              <div className="flex justify-between gap-2 bg-white rounded-full p-1.5 w-full md:w-fit md:justify-normal ">
                 <button
                   onClick={() => setActiveTab("single")}
-                  className={`px-6 py-3 rounded-full text-base font-semibold transition-all ${
+                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all md:px-6 md:text-base ${
                     activeTab === "single"
                       ? "bg-goooey-blue text-white shadow-[1px_1px_0_0_#000]"
                       : "text-black/40"
@@ -202,7 +202,7 @@ Sea Salt`}
                 </button>
                 <button
                   onClick={() => setActiveTab("packs")}
-                  className={`px-6 py-3 rounded-full text-base font-semibold transition-all ${
+                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all md:px-6 md:text-base ${
                     activeTab === "packs"
                       ? "bg-goooey-blue text-white shadow-[1px_1px_0_0_#000]"
                       : "text-black/40"
@@ -211,49 +211,78 @@ Sea Salt`}
                   Product Packs
                 </button>
               </div>
-              <div className="space-y-6">
-                <div className="grid grid-cols-4 gap-3">
-                  {productImages.map((img, index) => (
-                    <img
-                      key={index}
-                      src={img}
-                      alt={`Product view ${index + 1}`}
-                      className={`w-full aspect-square object-cover  ${
-                        index === 0 ? "border-3 border-goooey-blue" : ""
-                      }`}
-                    />
-                  ))}
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex gap-3">
-                    <div className="flex items-center justify-between bg-black rounded-full p-1.5 flex-1">
-                      <button
-                        onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
-                      >
-                        <Minus className="w-4 h-4" />
-                      </button>
-                      <span className="text-white text-2xl font-medium">
-                        {quantity}
-                      </span>
-                      <button
-                        onClick={() => setQuantity(quantity + 1)}
-                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
-                      >
-                        <Plus className="w-4 h-4" />
-                      </button>
-                    </div>
-                    <button className="flex-1 bg-black text-white py-3 px-8 rounded-full font-semibold">
-                      Add to Cart
-                    </button>
+              {activeTab === "single" ? (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-4 gap-3">
+                    {productImages.map((img, index) => (
+                      <img
+                        key={index}
+                        src={img}
+                        alt={`Product view ${index + 1}`}
+                        className={`w-full aspect-square object-cover  ${
+                          index === 0 ? "border-3 border-goooey-blue" : ""
+                        }`}
+                      />
+                    ))}
                   </div>
 
-                  <button className="w-full bg-goooey-blue text-white py-3 px-8 rounded-full font-bold uppercase shadow-[2px_4px_0_0_#FFF] hover:translate-y-0.5 hover:shadow-[1px_2px_0_0_#FFF] transition-all">
-                    buy now
-                  </button>
+                  <div className="space-y-4">
+                    <div className="flex gap-3">
+                      <div className="flex items-center justify-between bg-black rounded-full p-1.5 flex-1">
+                        <button
+                          onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                          className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                        >
+                          <Minus className="w-4 h-4" />
+                        </button>
+                        <span className="text-white text-2xl font-medium">
+                          {quantity}
+                        </span>
+                        <button
+                          onClick={() => setQuantity(quantity + 1)}
+                          className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                        >
+                          <Plus className="w-4 h-4" />
+                        </button>
+                      </div>
+                      <button className="flex-1 bg-black text-white px-1 md:py-3 md:px-8 rounded-full font-semibold">
+                        Add to Cart
+                      </button>
+                    </div>
+
+                    <button className="w-full bg-goooey-blue text-white py-3 px-8 rounded-full font-bold uppercase shadow-[2px_4px_0_0_#FFF] hover:translate-y-0.5 hover:shadow-[1px_2px_0_0_#FFF] transition-all">
+                      buy now
+                    </button>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-4 gap-3">
+                    {productImages.map((img, index) => (
+                      <img
+                        key={index}
+                        src={img}
+                        alt={`Product view ${index + 1}`}
+                        className={`w-full aspect-square object-cover  ${
+                          index === 0 ? "border-3 border-goooey-blue" : ""
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex gap-3">
+                      <button className="flex-1 bg-black text-white py-3 px-8 rounded-full font-semibold">
+                        Add to Cart
+                      </button>
+                    </div>
+
+                    <button className="w-full bg-goooey-blue text-white py-3 px-8 rounded-full font-bold uppercase shadow-[2px_4px_0_0_#FFF] hover:translate-y-0.5 hover:shadow-[1px_2px_0_0_#FFF] transition-all">
+                      buy now
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
