@@ -350,7 +350,7 @@ function FAQSection() {
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-[0_1.5px_0_0_#000]">
                     <svg
                       className={`w-6 h-6 transition-transform ${
-                        openIndex === index ? "rotate-180" : ""
+                        openIndex === index ? "rotate-90" : ""
                       }`}
                       viewBox="0 0 24 24"
                       fill="none"
@@ -359,7 +359,11 @@ function FAQSection() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
-                      <path d="M13.9342 5.65723C13.9342 5.65723 15.2958 7.8103 16.6918 9.20166C18.0878 10.593 19.9434 11.6683 19.9434 11.6683C19.9434 11.6683 17.851 13.1645 16.6918 14.3239C15.5337 15.4823 14.039 17.5726 14.039 17.5726M3.40725 11.6683L19.778 11.6683" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
                     </svg>
                   </div>
                 </div>

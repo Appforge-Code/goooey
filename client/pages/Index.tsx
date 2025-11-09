@@ -1,7 +1,9 @@
 import Layout from "@/components/Layout";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MoveLeft, MoveRight, Sparkles } from "lucide-react";
 import eyes from "/Images/Home/eyes.svg";
 import hero from "/Images/Home/hero.png";
+import item from "/Images/Home/Item.png";
+import gridImage from "/Images/Home/gridImage.png";
 
 export default function Index() {
   return (
@@ -46,6 +48,14 @@ function HeroSection() {
       </svg>
 
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <Sparkles
+          className="absolute -top-0 -left-4 w-6 h-6 hidden sm:block"
+          fill="white"
+        />
+        <Sparkles
+          className="absolute -bottom-0 -right-4 w-6 h-6 hidden sm:block"
+          fill="white"
+        />
         <div className="space-y-6 max-w-2xl">
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
             Rice Crispy Treats Stick with You
@@ -99,10 +109,10 @@ function HeroSection() {
 
           <div className="absolute -bottom-12 right-12 flex gap-4">
             <button className="text-4xl bg-white/70 border border-goooey-yellow rounded-full w-14 h-14 flex items-center justify-center hover:bg-white transition-colors">
-              ←
+              <MoveLeft />
             </button>
             <button className="text-4xl bg-white border border-goooey-yellow rounded-full w-14 h-14 flex items-center justify-center hover:bg-white/90 transition-colors">
-              →
+              <MoveRight />
             </button>
           </div>
         </div>
@@ -154,39 +164,33 @@ function ProductsSection() {
   const products = [
     {
       name: "The OG original",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/c7d04819282e60ed5ac1e7513a1f2ce4505b1d66?width=470",
-      bg: "bg-blue-100",
+      image: item,
+      price: "55",
     },
     {
       name: "Cookie Butter",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/c7d04819282e60ed5ac1e7513a1f2ce4505b1d66?width=470",
-      bg: "bg-red-100",
+      image: item,
+      price: "55",
     },
     {
       name: "Cookie Monster",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/c7d04819282e60ed5ac1e7513a1f2ce4505b1d66?width=470",
-      bg: "bg-blue-200",
+      image: item,
+      price: "55",
     },
     {
       name: "Strawberry Shortcake",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/d074bb8868a3d10e825678f91f1f39c36751f12f?width=470",
-      bg: "bg-orange-100",
+      image: item,
+      price: "55",
     },
     {
       name: "Cookie Monster",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/d074bb8868a3d10e825678f91f1f39c36751f12f?width=470",
-      bg: "bg-cyan-100",
+      image: item,
+      price: "55",
     },
     {
       name: "Creamy Banana Crunch",
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/170c15f7c585bdb0e9814cf782b1debf72eeb19b?width=470",
-      bg: "bg-yellow-100",
+      image: item,
+      price: "55",
     },
   ];
 
@@ -220,20 +224,40 @@ function ProductsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6">
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative group rounded-[42px] border-4 border-white overflow-hidden aspect-[4/5] bg-gradient-to-br from-gray-100 to-gray-200 hover:scale-105 transition-transform"
+              className="flex justify-center items-center relative h-[505px] rounded-[42px] mx-8 text-center space-y-6 overflow-hidden 
+                 transition-transform duration-300 hover:scale-105 group"
             >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
-              {/* <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-6">
-                <h3 className="font-bold text-xl">{product.name}</h3>
-              </div> */}
+              {/* Hover White Background from Bottom */}
+              <div
+                className="absolute z-10 bottom-0 left-0 w-full h-0 bg-white rounded-t-full flex flex-col justify-center items-center transition-all duration-500 ease-out 
+                   group-hover:h-1/2"
+              >
+                <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {product.name}
+                  </h3>
+                  <button className="bg-[#FFD800] text-black px-2 py-2 rounded-full font-bold inline-flex items-center gap-6 shadow-offset hover:translate-y-0.5 hover:shadow-[1px_1px_0_0_#000] transition-all">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="relative z-1">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
+                {/* Price Tag */}
+                <div className="absolute top-4 left-4 bg-white text-gray-900 text-lg font-semibold px-4 py-1 rounded-full shadow-md">
+                  ${product.price}.00
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -352,6 +376,44 @@ function PacksSection() {
 }
 
 function GallerySection() {
+  const images = [
+    {
+      src: gridImage,
+      alt: "Man holding gooey treat",
+      aspect: "aspect-[3/4]",
+      className: "lg:mt-16",
+    },
+    {
+      src: item,
+      alt: "Rice krispy treat in pan",
+      aspect: "aspect-square",
+      className: "",
+    },
+    {
+      src: item,
+      alt: "Woman in store",
+      aspect: "aspect-[3/4]",
+      className: "lg:mt-16",
+    },
+    {
+      src: item,
+      alt: "Three bowls of treats",
+      aspect: "aspect-[4/3]",
+      className: "",
+    },
+    {
+      src: item,
+      alt: "Gooey logo",
+      aspect: "aspect-[3/4]",
+      className: "lg:mt-[-4rem]", // Negative margin to pull it up
+    },
+    {
+      src: item,
+      alt: "Treat with sprinkles",
+      aspect: "aspect-square",
+      className: "",
+    },
+  ];
   return (
     <section className="relative bg-goooey-cream py-32 overflow-hidden">
       <div className="container mx-auto px-6 text-center">
@@ -373,22 +435,24 @@ function GallerySection() {
             strokeWidth="150"
           />
         </svg>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div
-              key={i}
-              className="rounded-[34px] border-[3px] border-goooey-blue aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden hover:scale-105 transition-transform z-10"
-            >
-              <img
-                src={`https://api.builder.io/api/v1/image/assets/TEMP/c7d04819282e60ed5ac1e7513a1f2ce4505b1d66?width=470`}
-                alt={`Gallery ${i}`}
-                className="w-full h-full object-cover"
-              />
+
+          {/* Main Content */}
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+            {/* Image Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+              {images.map((image, index) => (
+                <ImageCard
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  aspect={image.aspect}
+                  className={image.className}
+                />
+              ))}
             </div>
-          ))}
         </div>
       </div>
-      
     </section>
   );
 }
@@ -435,7 +499,7 @@ function ReviewsSection() {
 
   return (
     <section className="relative bg-goooey-blue py-32 overflow-hidden">
-    <div
+      <div
         className="absolute top-0 left-0 right-0 h-32 bg-goooey-cream"
         style={{ clipPath: "ellipse(70% 100% at 50% 0%)" }}
       />
@@ -472,13 +536,30 @@ function ReviewsSection() {
 
         <div className="flex justify-center gap-4 mt-12">
           <button className="bg-white/70 border border-goooey-yellow rounded-full w-14 h-14 flex items-center justify-center text-4xl hover:bg-white transition-colors">
-            ←
+            <MoveLeft />
           </button>
           <button className="bg-white border border-goooey-yellow rounded-full w-14 h-14 flex items-center justify-center text-4xl hover:bg-white/90 transition-colors">
-            →
+            <MoveRight />
           </button>
         </div>
       </div>
     </section>
   );
 }
+
+const ImageCard = ({ src, alt, aspect, className = "" }) => {
+  return (
+    <div className={`w-full  ${className}`}>
+      <div className="bg-white p-1.5 rounded-[3rem] shadow-lg transition-transform duration-300 hover:scale-105 hover:rotate-[-2deg]">
+        <div className=" rounded-[2.8rem]">
+          <img
+            src={src}
+            alt={alt}
+            className={`w-full h-full object-cover rounded-[2.5rem] ${aspect}`}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+

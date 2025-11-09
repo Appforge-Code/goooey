@@ -140,7 +140,7 @@ function Footer() {
   return (
     <footer className="relative bg-goooey-blue  text-white overflow-hidden">
       {/* <div className="absolute inset-0 rounded-t-[800px] border-t-[12px] border-white"></div> */}
-
+      
       <div className="relative bg-black inset-0 rounded-t-full border-t-[12px] border-white container mx-auto px-6 pt-32 pb-12">
         <div className="text-center mb-16">
           <img

@@ -402,12 +402,20 @@ function FAQSection() {
                 <span className="font-display text-lg text-left">
                   {faq.question}
                 </span>
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-[0_2px_0_0_#000]">
-                  {openFAQ === index ? (
-                    <ArrowRight className="w-5 h-5 text-black" />
-                  ) : (
-                    <ArrowRight className="w-5 h-5 text-black " />
-                  )}
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white shadow-[0_1.5px_0_0_#000] flex items-center justify-center flex-shrink-0">
+                  <svg
+                    className={`w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 ${openFAQ === index ? "rotate-90" : ""}`}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="black"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
                 </div>
               </button>
               {openFAQ === index && faq.answer && (

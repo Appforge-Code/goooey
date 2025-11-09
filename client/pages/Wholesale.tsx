@@ -30,7 +30,7 @@ function HeroSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto text-center">
-        <h1 className="font-display text-5xl md:text-6xl text-goooey-cream text-stroke-light">
+        <h1 className="font-display text-5xl md:text-6xl text-goooey-cream text-stroke-black">
           Wholesale
         </h1>
         <p className="text-white text-base md:text-lg leading-relaxed max-w-xl mx-auto">
@@ -353,7 +353,7 @@ function FAQSection() {
 
               {expandedFaq === index && (
                 <div className="mt-6 px-6">
-                  <div className="w-full h-1 rounded-full bg-white mb-4"></div>
+                  {/* <div className="w-full h-1 rounded-full bg-white mb-4"></div> */}
                   <p className="text-black text-center text-base md:text-lg leading-relaxed">
                     {faq.answer}
                   </p>

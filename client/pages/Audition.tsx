@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { useState } from "react";
-import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
+import { ChevronDown, ChevronUp, ArrowRight, ArrowDown } from "lucide-react";
 
 export default function Audition() {
   return (
@@ -346,9 +346,9 @@ function FAQSection() {
                 </span>
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-[0_2px_0_0_#000] flex-shrink-0">
                   {openFAQ === index ? (
-                    <ChevronUp className="w-5 h-5 text-black" />
+                    <ArrowDown className="w-5 h-5 text-black" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-black" />
+                    <ArrowRight className="w-5 h-5 text-black" />
                   )}
                 </div>
               </button>
