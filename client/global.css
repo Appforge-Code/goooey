@@ -129,6 +129,14 @@
     paint-order: stroke fill;
   }
 
+  .text-outline-gooey {
+  -webkit-text-stroke: 1px white;
+}
+.text-stroke-gooey {
+  -webkit-text-stroke: 2px #000;
+}
+
+
   .shadow-offset {
     box-shadow: 2px 2px 0 0 hsl(var(--goooey-black));
   }

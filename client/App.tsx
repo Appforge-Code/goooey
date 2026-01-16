@@ -14,6 +14,7 @@ import Audition from "./pages/Audition";
 import Contact from "./pages/Contact";
 import JoinTeam from "./pages/JoinTeam";
 import Wholesale from "./pages/Wholesale";
+import Franchise from "./pages/Franchise";
 import CorporateCatering from "./pages/CorporateCatering";
 import Fundraising from "./pages/Fundraising";
 import NotFound from "./pages/NotFound";
@@ -79,9 +80,13 @@ const App = () => {
               element={<Placeholder title="Wholesale" />}
             /> */}
             <Route path="/wholesale" element={<Wholesale />} />
-            <Route
+            {/* <Route
               path="/franchise"
               element={<Placeholder title="Franchise" />}
+            /> */}
+            <Route
+              path="/franchise"
+              element={<Franchise />}
             />
             {/* <Route
               path="/catering"

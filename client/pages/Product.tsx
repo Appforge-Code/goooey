@@ -1,8 +1,6 @@
 import Layout from "@/components/Layout";
 import { useState } from "react";
-import { Minus, Plus, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
-import CurvedLoop from "@/components/ui/CurvedLoop";
-import SendShape from "@/components/ui/SandShape";
+import item from "/Images/Home/Item.png";
 
 export default function Product() {
   return (
@@ -15,279 +13,97 @@ export default function Product() {
 }
 
 function ProductHeroSection() {
-  const [quantity, setQuantity] = useState(1);
-  const [activeTab, setActiveTab] = useState("single");
-  const [expandedSections, setExpandedSections] = useState({
-    nutritional: false,
-    storage: true,
-    delivery: true,
-    refund: true,
-  });
-
-  const productImages = [
-    "https://api.builder.io/api/v1/image/assets/TEMP/5f943fcaa9e9431a499a67e57c1b033f9d72bb9b?width=186",
-    "https://api.builder.io/api/v1/image/assets/TEMP/4df91203444f63a2439e0ae2fa081bb403a6e099?width=186",
-    "https://api.builder.io/api/v1/image/assets/TEMP/362369a462bf63980a9d533cee479aea9e0bd057?width=186",
-    "https://api.builder.io/api/v1/image/assets/TEMP/b33e1f0adcba46fffabeb85f32f63e28d918df5f?width=186",
-    "https://api.builder.io/api/v1/image/assets/TEMP/d1e511bb9f54ab8c4ce26475817df221f7b73ef2?width=188",
-    "https://api.builder.io/api/v1/image/assets/TEMP/027ba6e6adefda581b74d75d3d5c2eac9b996fc1?width=188",
-    "https://api.builder.io/api/v1/image/assets/TEMP/734141312bd97f1e71926fc6d8a1c34c2c091f13?width=188",
-    "https://api.builder.io/api/v1/image/assets/TEMP/7789cf12646d741c86c1333d55ae3d10adeeb9e8?width=186",
-    "https://api.builder.io/api/v1/image/assets/TEMP/dbc3c93e4b51e1792db2e1219aa660ae4d4d1be6?width=186",
-    "https://api.builder.io/api/v1/image/assets/TEMP/f0532f6d020cf63ac63c543764e861616c4a38e1?width=186",
-    "https://api.builder.io/api/v1/image/assets/TEMP/7696ad5bf7caf546f56cc02b02f64058aab7b9e8?width=186",
-    "https://api.builder.io/api/v1/image/assets/TEMP/9ca58f48c0b1e396aaaa09fb3709a867e8c4647d?width=186",
+  const products = [
+    {
+      name: "The OG original",
+      image: item,
+      price: "55",
+    },
+    {
+      name: "Cookie Butter",
+      image: item,
+      price: "55",
+    },
+    {
+      name: "Cookie Monster",
+      image: item,
+      price: "55",
+    },
+    {
+      name: "Strawberry Shortcake",
+      image: item,
+      price: "55",
+    },
+    {
+      name: "Cookie Monster",
+      image: item,
+      price: "55",
+    },
+    {
+      name: "Creamy Banana Crunch",
+      image: item,
+      price: "55",
+    },
   ];
-
-  const toggleSection = (section: keyof typeof expandedSections) => {
-    setExpandedSections((prev) => ({
-      ...prev,
-      [section]: !prev[section],
-    }));
-  };
-
   return (
-    <section className="relative bg-[#CCE7FF] bg-goooey-pale-blue py-20 pt-32 overflow-hidden">
+    <section className="relative bg-goooey-blue py-20 pt-32 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="rounded-[42px] border border-black/20 p-8 max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-12">
-            <div className="space-y-8 overflow-y-auto max-h-[600px] pr-4">
-              <div>
-                <h1 className="text-4xl font-extrabold text-black capitalize mb-4">
-                  Cookie Butter
-                </h1>
-                <div className="flex items-center gap-4 mb-6">
-                  <p className="text-2xl font-bold text-black">$ 7.00</p>
-                  <p className="text-sm text-black/60">
-                    (4.9 stars) • 20 reviews
-                  </p>
+        <div className="text-center">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
+            <span className="text-white block">
+              {" "}
+              Explore <span className="text-goooey-yellow ">Our</span>
+            </span>
+            <span className="text-goooey-yellow block">
+              Favourite <span className="text-white">Taste</span>
+            </span>
+          </h1>
+
+          {/* Description */}
+          <p className="text-white text-lg leading-relaxed max-w-xl mx-auto mb-10">
+            Explore our mouthwatering menu filled with flavourful options to
+            satisfy every craving.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6 ">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center relative h-[505px] rounded-[42px]  mx-8 text-center space-y-6 overflow-hidden 
+                 transition-transform duration-300 hover:scale-105 group"
+            >
+              {/* Hover White Background from Bottom */}
+              <div
+                className="absolute z-10 bottom-0 left-0 w-full h-0 bg-white rounded-t-full flex flex-col justify-center items-center transition-all duration-500 ease-out 
+                   group-hover:h-1/2"
+              >
+                <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="font-display text-2xl font-semibold text-gray-900 mb-4">
+                    {product.name}
+                  </h3>
+                  <button className="bg-[#FFD800] text-black px-2 py-2 rounded-full font-bold inline-flex items-center gap-6 shadow-offset hover:translate-y-0.5 hover:shadow-[1px_1px_0_0_#000] transition-all">
+                    Order Now
+                  </button>
                 </div>
               </div>
 
-              <p className="text-base leading-relaxed text-black">
-                The classic that started it all! A perfectly gooey blend of
-                marshmallow and crispy rice, giving you that warm, nostalgic hug
-                in every bite. "I'm a OG, it's only one me."
-              </p>
-
-              <div className="space-y-2">
-                <p className="text-base leading-relaxed text-black whitespace-pre-line">
-                  {`Marshmallows
-Butter
-Rice Krispy Cereal
-Vanilla Extract
-Sea Salt`}
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                <button
-                  onClick={() => toggleSection("nutritional")}
-                  className="w-full flex items-center justify-between py-4 border-b border-black/20"
-                >
-                  <h3 className="text-lg font-extrabold text-black uppercase">
-                    NUTRITIONAL FACTS
-                  </h3>
-                  {expandedSections.nutritional ? (
-                    <Minus className="w-7 h-7 bg-white border-2 border-black border-full rounded-full" />
-                  ) : (
-                    <Plus className="w-7 h-7 bg-white border-2 border-black border-full rounded-full" />
-                  )}
-                </button>
-                {expandedSections.nutritional && (
-                  <p className="text-sm text-black/60 leading-relaxed">
-                    Calories: 240 | Total Fat: 8g | Saturated Fat: 4.5g |
-                    Cholesterol: 17mg | Sodium:94mg | Total Carbohydrates: 41.5g
-                    | Sugars: 24g | Protein: 1g
-                  </p>
-                )}
-
-                <button
-                  onClick={() => toggleSection("storage")}
-                  className="w-full flex items-center justify-between py-4 border-b border-black/20"
-                >
-                  <h3 className="text-lg font-extrabold text-black uppercase">
-                    Storage Instructions
-                  </h3>
-                  {expandedSections.storage ? (
-                    <Minus className="w-7 h-7 bg-white border-2 border-black border-full rounded-full" />
-                  ) : (
-                    <Plus className="w-7 h-7 bg-white border-2 border-black border-full rounded-full" />
-                  )}
-                </button>
-                {expandedSections.storage && (
-                  <p className="text-sm text-black/60 leading-relaxed whitespace-pre-line">
-                    {`- Store in a cool, dry place.
-- Best consumed within 7 days of opening.
-- Keep frozen for up to 2 months for longer-lasting freshness.
-- Thaw out for soft, gooey goodness.`}
-                  </p>
-                )}
-
-                <button
-                  onClick={() => toggleSection("delivery")}
-                  className="w-full flex items-center justify-between py-4 border-b border-black/20"
-                >
-                  <h3 className="text-lg font-extrabold text-black uppercase">
-                    Delivery information
-                  </h3>
-                  {expandedSections.delivery ? (
-                    <Minus className="w-7 h-7 bg-white border-2 border-black border-full rounded-full" />
-                  ) : (
-                    <Plus className="w-7 h-7 bg-white border-2 border-black border-full rounded-full" />
-                  )}
-                </button>
-                {expandedSections.delivery && (
-                  <div className="text-sm text-black leading-relaxed space-y-2">
-                    <p className="font-bold">
-                      Gooey Treats – Made Fresh, Delivered Fast!
-                    </p>
-                    <p>
-                      Craving freshly made, ultra-gooey treats? We've got you
-                      covered! Whether you're ordering for nationwide shipping
-                      or using DoorDash for instant local delivery, we make sure
-                      your treats arrive fresh, fast, and gooeylicious!
-                    </p>
-                    <p className="font-bold">Nationwide Shipping</p>
-                    <p>
-                      📦{" "}
-                      <span className="font-bold">Order before 2 PM PST –</span>{" "}
-                      Your treats will be made fresh and shipped the same day.
-                    </p>
-                    <p>
-                      📦{" "}
-                      <span className="font-bold">Order after 2 PM PST –</span>{" "}
-                      Your treats will be made fresh the next morning and
-                      shipped that day before 5 PM PST.
-                    </p>
-                  </div>
-                )}
-
-                <button
-                  onClick={() => toggleSection("refund")}
-                  className="w-full flex items-center justify-between py-4"
-                >
-                  <h3 className="text-lg font-extrabold text-black uppercase">
-                    Refund
-                  </h3>
-                  {expandedSections.refund ? (
-                    <Minus className="w-7 h-7 bg-white border-2 border-black border-full rounded-full" />
-                  ) : (
-                    <Plus className="w-7 h-7 bg-white border-2 border-black border-full rounded-full" />
-                  )}
-                </button>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="relative">
+              {/* Content */}
+              <div className="relative z-1 ">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/cf0f5c1b68650af3a16bebce81691a685780c1cd?width=800"
-                  alt="Cookie Butter product"
-                  className="w-full max-w-md mx-auto rounded-[42px]  shadow-2xl"
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
                 />
+                {/* Price Tag */}
+                <div className="absolute top-4 left-4 bg-white text-gray-900 text-lg font-semibold px-4 py-1 rounded-full shadow-md">
+                  ${product.price}.00
+                </div>
               </div>
             </div>
-            <div className="space-y-6">
-              <div className="flex justify-between gap-2 bg-white rounded-full p-1.5 w-full md:w-fit md:justify-normal ">
-                <button
-                  onClick={() => setActiveTab("single")}
-                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all md:px-6 md:text-base ${
-                    activeTab === "single"
-                      ? "bg-goooey-blue text-white shadow-[1px_1px_0_0_#000]"
-                      : "text-black/40"
-                  }`}
-                >
-                  Single Product
-                </button>
-                <button
-                  onClick={() => setActiveTab("packs")}
-                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all md:px-6 md:text-base ${
-                    activeTab === "packs"
-                      ? "bg-goooey-blue text-white shadow-[1px_1px_0_0_#000]"
-                      : "text-black/40"
-                  }`}
-                >
-                  Product Packs
-                </button>
-              </div>
-              {activeTab === "single" ? (
-                <div className="space-y-6">
-                  <div className="grid grid-cols-4 gap-3">
-                    {productImages.map((img, index) => (
-                      <img
-                        key={index}
-                        src={img}
-                        alt={`Product view ${index + 1}`}
-                        className={`w-full aspect-square object-cover  ${
-                          index === 0 ? "border-3 border-goooey-blue" : ""
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex gap-3">
-                      <div className="flex items-center justify-between bg-black rounded-full p-1.5 flex-1">
-                        <button
-                          onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                          className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
-                        >
-                          <Minus className="w-4 h-4" />
-                        </button>
-                        <span className="text-white text-2xl font-medium">
-                          {quantity}
-                        </span>
-                        <button
-                          onClick={() => setQuantity(quantity + 1)}
-                          className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
-                        >
-                          <Plus className="w-4 h-4" />
-                        </button>
-                      </div>
-                      <button className="flex-1 bg-black text-white px-1 md:py-3 md:px-8 rounded-full font-semibold">
-                        Add to Cart
-                      </button>
-                    </div>
-
-                    <button className="w-full bg-goooey-blue text-white py-3 px-8 rounded-full font-bold uppercase shadow-[2px_4px_0_0_#FFF] hover:translate-y-0.5 hover:shadow-[1px_2px_0_0_#FFF] transition-all">
-                      buy now
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <div className="space-y-6">
-                  <div className="grid grid-cols-4 gap-3">
-                    {productImages.map((img, index) => (
-                      <img
-                        key={index}
-                        src={img}
-                        alt={`Product view ${index + 1}`}
-                        className={`w-full aspect-square object-cover  ${
-                          index === 0 ? "border-3 border-goooey-blue" : ""
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex gap-3">
-                      <button className="flex-1 bg-black text-white py-3 px-8 rounded-full font-semibold">
-                        Add to Cart
-                      </button>
-                    </div>
-
-                    <button className="w-full bg-goooey-blue text-white py-3 px-8 rounded-full font-bold uppercase shadow-[2px_4px_0_0_#FFF] hover:translate-y-0.5 hover:shadow-[1px_2px_0_0_#FFF] transition-all">
-                      buy now
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-      {/* <CurvedLoop marqueeText="Be ✦ Creative ✦ With ✦ React ✦ Bits ✦" className="bg-black" /> */}
     </section>
   );
 }
