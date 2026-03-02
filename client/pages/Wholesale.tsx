@@ -75,7 +75,7 @@ function WorksSection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/4b13580345bd9243a3b781b337d73b37143ba7f2?width=848"
               alt="Wholesale Product"
-              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform -rotate-[7deg] hover:scale-105 transition-transform duration-300"
+              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform md:-rotate-[7deg] mx-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
 
@@ -139,7 +139,7 @@ function BenefitsSection() {
               <h2 className="text-white font-bold text-3xl md:text-[42px] leading-tight uppercase">
                 PROGRAM
               </h2>
-              <h3 className="font-display text-5xl text-goooey-cream text-stroke-light">
+              <h3 className="font-display text-4xl md:text-5xl text-goooey-cream text-stroke-light">
                 Benefits
               </h3>
             </div>
@@ -165,7 +165,7 @@ function BenefitsSection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/4469001a511ba47de7baf197f8b1f4ee59bc46eb?width=848"
               alt="Happy customer"
-              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px]  transform rotate-[7deg] hover:scale-105 transition-transform duration-300"
+              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform md:rotate-[7deg] mx-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
@@ -195,7 +195,7 @@ function PricingSection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/5b5ef82fa0c60cd47c4a8a2ae6dc11b0ef009cdf?width=848"
               alt="Wholesale treats"
-              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform -rotate-[7deg] hover:scale-105 transition-transform duration-300"
+              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform md:-rotate-[7deg] mx-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
 
@@ -204,7 +204,7 @@ function PricingSection() {
               <h2 className="text-black font-bold text-3xl md:text-[42px] leading-tight uppercase">
                 WHOLESALE
               </h2>
-              <h3 className="font-display text-5xl md:text-6xl text-goooey-blue text-stroke-white">
+              <h3 className="font-display text-4xl md:text-6xl text-goooey-blue text-stroke-white">
                 Pricing
               </h3>
             </div>

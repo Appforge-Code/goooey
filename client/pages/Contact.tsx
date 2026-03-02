@@ -64,7 +64,7 @@ function ContactHeroSection() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12 max-w-2xl mx-auto">
-          <h1 className="font-display text-5xl md:text-6xl text-goooey-cream text-stroke-light mb-4">
+          <h1 className="font-display text-4xl md:text-6xl text-goooey-cream text-stroke-light mb-4">
             Contact Us
           </h1>
           <p className="text-white text-base leading-relaxed">
@@ -74,7 +74,7 @@ function ContactHeroSection() {
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto bg-goooey-cream rounded-[42px] p-8 shadow-[2px_4px_0_0_#000]">
+        <div className="max-w-2xl mx-auto bg-goooey-cream rounded-[42px] p-6 md:p-8 shadow-[2px_4px_0_0_#000]">
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="space-y-2">
               <label
@@ -196,7 +196,7 @@ function ContactInfoCards() {
           {contactMethods.map((method, index) => (
             <div
               key={index}
-              className="bg-goooey-cream rounded-[42px] p-10 shadow-[2px_4px_0_0_#000] hover:scale-105 transition-transform"
+              className="bg-goooey-cream rounded-[42px] p-8 md:p-10 shadow-[2px_4px_0_0_#000] hover:scale-105 transition-transform"
             >
               <div className="space-y-4">
                 <div className="flex items-center gap-2">

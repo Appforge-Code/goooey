@@ -108,16 +108,16 @@ function IntroSection() {
             </div>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-6 mt-10 md:mt-0">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/9836d3e08057e567ad64149ff1d6261b6c54a20c?width=830"
               alt="Fundraising treats"
-              className="w-full rounded-[42px] border-goooey-cream transform rotate-6 hover:rotate-0 transition-transform"
+              className="w-full rounded-[42px] border-4 md:border-8 border-goooey-cream transform md:rotate-6 hover:rotate-0 transition-transform"
             />
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/0c2f6b607078bf056af3525217f88b7e6a787661?width=621"
               alt="Happy fundraiser"
-              className="w-2/3 ml-auto rounded-[42px]  border-goooey-cream transform -rotate-12 hover:rotate-0 transition-transform"
+              className="w-[85%] md:w-2/3 ml-auto rounded-[42px] border-4 md:border-8 border-goooey-cream transform md:-rotate-12 hover:rotate-0 transition-transform"
             />
           </div>
         </div>

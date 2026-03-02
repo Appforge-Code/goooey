@@ -18,10 +18,10 @@ function HeroSection() {
     <section className="relative bg-goooey-blue py-32 overflow-hidden pt-40 z-10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-white font-bold text-4xl sm:text-5xl md:text-[62px] leading-tight uppercase mb-2">
-            YOUR DREAM <br /> JOB JUST GOT
+          <h1 className="text-white font-bold text-3xl sm:text-5xl md:text-[62px] leading-tight uppercase mb-2">
+            YOUR DREAM <br className="hidden sm:block" /> JOB JUST GOT
           </h1>
-          <h2 className="font-display text-5xl md:text-6xl text-goooey-cream text-stroke-black">
+          <h2 className="font-display text-4xl md:text-6xl text-goooey-cream text-stroke-black mt-2 md:mt-0">
             Goooey
           </h2>
         </div>
@@ -31,7 +31,7 @@ function HeroSection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/fa6ed1f96b2a86f46de86829bfe895b0d65e1314?width=848"
               alt="Goooey Product"
-              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px]  transform -rotate-[7deg] hover:scale-105 transition-transform duration-300"
+              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform md:-rotate-[7deg] hover:scale-105 transition-transform duration-300"
             />
           </div>
 
@@ -60,7 +60,7 @@ function HeroSection() {
             className="w-56 md:w-72 rounded-[42px] transform rotate-[16deg] hover:scale-105 transition-transform duration-300"
           />
         </div>
-        
+
       </div>
     </section>
   );
@@ -68,7 +68,7 @@ function HeroSection() {
 function LookingFor() {
   return (
     <section className="relative bg-goooey-cream py-32 overflow-hidden">
-      
+
       <svg
         className="absolute top-0 left-0 w-full h-24 -translate-y-full"
         preserveAspectRatio="none"
@@ -88,7 +88,7 @@ function LookingFor() {
               <h2 className="text-black font-bold text-3xl md:text-[42px] leading-tight uppercase">
                 WHO WE
               </h2>
-              <h3 className="font-display text-5xl md:text-6xl text-goooey-blue text-stroke-white">
+              <h3 className="font-display text-4xl md:text-6xl text-goooey-blue text-stroke-white">
                 Looking For?
               </h3>
             </div>
@@ -130,7 +130,7 @@ function LookingFor() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/f163ef0ba25a3b500917ca1a101bba9370622728?width=848"
               alt="Team member"
-              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px]  transform rotate-[7deg] hover:scale-105 transition-transform duration-300"
+              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform md:rotate-[7deg] hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
@@ -167,7 +167,7 @@ function WhyWork() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/18fc42915216c8fdc05412d009de1a382e1a1de8?width=848"
               alt="Happy team member"
-              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform -rotate-[7deg] hover:scale-105 transition-transform duration-300"
+              className="w-80 md:w-96 lg:w-full max-w-md rounded-[42px] transform md:-rotate-[7deg] hover:scale-105 transition-transform duration-300"
             />
           </div>
 
@@ -176,7 +176,7 @@ function WhyWork() {
               <h2 className="text-white font-bold text-3xl md:text-[42px] leading-tight uppercase">
                 WHY WORK AT
               </h2>
-              <h3 className="font-display text-5xl md:text-5xl text-goooey-blue text-stroke-white">
+              <h3 className="font-display text-4xl md:text-5xl text-goooey-blue text-stroke-white">
                 Goooey?
               </h3>
             </div>

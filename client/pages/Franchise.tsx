@@ -147,8 +147,8 @@ function IntroSection() {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative w-full max-w-md">
+          <div className="order-1 md:order-2 flex justify-center mt-10 md:mt-0">
+            <div className="relative w-[85%] md:w-full max-w-md">
               <svg
                 className="w-full h-auto"
                 viewBox="0 0 453 435"

@@ -49,7 +49,7 @@ function ProductHeroSection() {
     <section className="relative bg-goooey-blue py-20 pt-32 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center">
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
             <span className="text-white block">
               {" "}
               Explore <span className="text-goooey-yellow ">Our</span>
@@ -60,17 +60,17 @@ function ProductHeroSection() {
           </h1>
 
           {/* Description */}
-          <p className="text-white text-lg leading-relaxed max-w-xl mx-auto mb-10">
+          <p className="text-white text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-10">
             Explore our mouthwatering menu filled with flavourful options to
             satisfy every craving.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-y-12 mb-6">
           {products.map((product, index) => (
             <div
               key={index}
-              className="flex justify-center items-center relative h-[505px] rounded-[42px]  mx-8 text-center space-y-6 overflow-hidden 
+              className="flex justify-center items-center relative h-[380px] sm:h-[450px] md:h-[505px] rounded-[42px] mx-0 sm:mx-4 text-center space-y-6 overflow-hidden 
                  transition-transform duration-300 hover:scale-105 group"
             >
               {/* Hover White Background from Bottom */}
@@ -179,16 +179,16 @@ function WhyGoooeySection() {
             </div>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-6 mt-10 md:mt-0">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/57778ce5da0c38d2b44d6239d22ff3a0b9768971?width=848"
               alt="Goooey treats variety"
-              className="w-full rounded-[42px] transform rotate-6 hover:rotate-0 transition-transform"
+              className="w-full rounded-[42px] transform md:rotate-6 hover:rotate-0 transition-transform"
             />
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/c0ab3f49ec44afe514e012a94cae89b2570bd5c9?width=764"
               alt="Making treats"
-              className="w-3/4 ml-auto rounded-[42px]  transform -rotate-6 hover:rotate-0 transition-transform"
+              className="w-[85%] md:w-3/4 ml-auto rounded-[42px] transform md:-rotate-6 hover:rotate-0 transition-transform"
             />
           </div>
         </div>
@@ -225,11 +225,11 @@ function FAQSection() {
   return (
     <section className="relative bg-goooey-blue py-32">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-bold text-5xl text-white uppercase mb-2">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-bold text-4xl md:text-5xl text-white uppercase mb-2">
             COMMON
           </h2>
-          <h3 className="font-display text-5xl text-goooey-cream text-stroke-light">
+          <h3 className="font-display text-4xl md:text-5xl text-goooey-cream text-stroke-light">
             Questions
           </h3>
         </div>

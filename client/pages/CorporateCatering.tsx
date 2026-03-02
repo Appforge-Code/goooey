@@ -131,7 +131,7 @@ function IntroSection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/c2fcafacc833f76a65fa8fb603f9c7585765a8d6?width=848"
               alt="Delicious Goooey treats"
-              className="w-full max-w-md rounded-[42px]  transform -rotate-6 hover:rotate-0 transition-transform"
+              className="w-[85%] md:w-full max-w-md rounded-[42px] transform md:-rotate-6 hover:rotate-0 transition-transform"
             />
           </div>
         </div>

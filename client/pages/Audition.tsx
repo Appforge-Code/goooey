@@ -23,13 +23,13 @@ function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-goooey-blue/60"></div>
-      
-      <div className="relative z-10 container mx-auto px-6 py-32 flex items-center justify-center min-h-[600px]">
-        <h1 className="font-display text-6xl md:text-7xl text-goooey-blue text-stroke-white uppercase text-center">
+
+      <div className="relative z-10 container mx-auto px-6 py-32 flex items-center justify-center min-h-[400px] md:min-h-[600px]">
+        <h1 className="font-display text-5xl md:text-7xl text-goooey-blue text-stroke-white uppercase text-center">
           Audition
         </h1>
       </div>
-      
+
     </section>
   );
 }
@@ -64,7 +64,7 @@ function BeTheFaceSection() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto mb-16">
-          <p className="text-4xl font-bold text-[#654800] leading-tight text-left">
+          <p className="text-2xl md:text-4xl font-bold text-[#654800] leading-tight text-left">
             We're looking for fun, energetic, and charismatic personalities to be
             featured in our Goooey Treats commercials! Whether you're a natural in
             front of the camera or just love making people smile, this is your
@@ -75,8 +75,8 @@ function BeTheFaceSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="space-y-8">
             <div>
-              <h2 className="font-extrabold text-4xl text-goooey-blue text-stroke-white uppercase mb-4">
-                what we are <br/> looking for
+              <h2 className="font-extrabold text-3xl md:text-4xl text-goooey-blue text-stroke-white uppercase mb-4">
+                what we are <br /> looking for
               </h2>
             </div>
 
@@ -98,16 +98,16 @@ function BeTheFaceSection() {
             </div>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-6 mt-10 md:mt-0">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/27af0216772cf170bb9e0a13ede3461c71fcb5d2?width=1103"
               alt="Group photo"
-              className="w-full rounded-[42px] transform rotate-6 hover:rotate-0 transition-transform"
+              className="w-full rounded-[42px] transform md:rotate-6 hover:rotate-0 transition-transform"
             />
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/30ec4db9877bbe1db369942cb764cd550b1da28e?width=621"
               alt="Person with treats"
-              className="w-2/3 ml-auto rounded-[42px] transform -rotate-12 hover:rotate-0 transition-transform"
+              className="w-[85%] md:w-2/3 ml-auto rounded-[42px] transform md:-rotate-12 hover:rotate-0 transition-transform"
             />
           </div>
         </div>
@@ -143,7 +143,7 @@ function HowItWorksSection() {
 
   return (
     <section className="relative bg-goooey-blue py-32 overflow-hidden">
-       
+
       <svg
         className="absolute top-0 left-0 w-full opacity-10"
         viewBox="0 0 1440 1120"
@@ -168,15 +168,14 @@ function HowItWorksSection() {
             {steps.map((step, index) => (
               <div
                 key={step.number}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
               >
                 <div className="flex-1 flex justify-center">
                   <div className="relative">
-                    <div className="w-96 h-96 rounded-full border-4 border-white bg-goooey-cream flex items-center justify-center p-16 shadow-xl">
-                      <div className="text-center space-y-6">
-                        <h3 className="text-3xl md:text-4xl font-extrabold text-white text-stroke-black leading-tight capitalize">
+                    <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full border-4 border-white bg-goooey-cream flex items-center justify-center p-8 sm:p-12 md:p-16 shadow-xl">
+                      <div className="text-center space-y-4 sm:space-y-6">
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white text-stroke-black leading-tight capitalize">
                           {step.title}
                         </h3>
                         {step.description && (
@@ -244,16 +243,16 @@ function WhyAuditionSection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/4149ef58a3be0a8bedee3015682b75e15b297d7e?width=830"
               alt="Person enjoying treats"
-              className="w-full max-w-md rounded-[42px]transform -rotate-6 hover:rotate-0 transition-transform"
+              className="w-full max-w-md rounded-[42px] transform md:-rotate-6 hover:rotate-0 transition-transform mx-auto md:mx-0"
             />
           </div>
 
           <div className="space-y-8">
-            <div>
-              <h2 className="font-extrabold text-5xl text-black uppercase mb-2">
+            <div className="text-center md:text-left">
+              <h2 className="font-extrabold text-4xl md:text-5xl text-black uppercase mb-2">
                 Why
               </h2>
-              <h3 className="font-display text-4xl text-goooey-blue text-stroke uppercase">
+              <h3 className="font-display text-3xl md:text-4xl text-goooey-blue text-stroke uppercase">
                 audition?
               </h3>
             </div>
@@ -273,12 +272,14 @@ function WhyAuditionSection() {
               </p>
             </div>
 
-            <button className="bg-goooey-blue text-white px-8 py-4 rounded-full font-semibold inline-flex items-center gap-6 border border-black shadow-offset hover:translate-y-0.5 hover:shadow-[1px_1px_0_0_#000] transition-all text-lg">
-              Apply Now
-              <span className="bg-goooey-blue text-white rounded-full w-8 h-8 flex items-center justify-center border border-white">
-                <ArrowRight className="w-4 h-4" />
-              </span>
-            </button>
+            <div className="flex justify-center md:justify-start">
+              <button className="bg-goooey-blue text-white px-8 py-4 rounded-full font-semibold inline-flex items-center gap-6 border border-black shadow-offset hover:translate-y-0.5 hover:shadow-[1px_1px_0_0_#000] transition-all text-lg">
+                Apply Now
+                <span className="bg-goooey-blue text-white rounded-full w-8 h-8 flex items-center justify-center border border-white">
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -322,11 +323,11 @@ function FAQSection() {
   return (
     <section className="relative bg-goooey-blue py-32">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-bold text-5xl text-white uppercase mb-2">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-bold text-4xl md:text-5xl text-white uppercase mb-2">
             COMMON
           </h2>
-          <h3 className="font-display text-5xl text-goooey-cream text-stroke-light">
+          <h3 className="font-display text-4xl md:text-5xl text-goooey-cream text-stroke-light">
             Questions
           </h3>
         </div>

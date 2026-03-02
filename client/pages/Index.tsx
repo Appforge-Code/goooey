@@ -28,11 +28,11 @@ function HeroSection() {
   return (
     <section className="relative bg-goooey-blue min-h-screen flex items-center justify-center overflow-hidden py-24">
       {/* Background Gooey Text */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-15 pointer-events-none">
-        <h1 className="font-display  text-[18rem] font-bold text-transparent text-outline-gooey select-none leading-none">
+      <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center opacity-15 pointer-events-none gap-8 md:gap-0">
+        <h1 className="font-display text-[10rem] md:text-[18rem] font-bold text-transparent text-outline-gooey select-none leading-none">
           Goooey
         </h1>
-        <h1 className="font-display  text-[18rem] font-bold text-transparent text-outline-gooey select-none leading-none">
+        <h1 className="font-display text-[10rem] md:text-[18rem] font-bold text-transparent text-outline-gooey select-none leading-none hidden md:block">
           Goooey
         </h1>
       </div>
@@ -84,7 +84,7 @@ function HeroSection() {
           adventure in gooey goodness.
         </p>
 
-        
+
 
         {/* CTA Button */}
         <button className="bg-black text-white px-8 py-4 rounded-full font-bold inline-flex items-center gap-6 shadow-offset-white hover:translate-y-0.5 hover:shadow-[1px_1px_0_0_#fff] transition-all">
@@ -174,25 +174,25 @@ function ProductsSection() {
   return (
     <section className="relative bg-goooey-blue py-32 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16">
-          <h2 className="font-display text-4xl md:text-5xl text-white max-sm:text-center">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 mb-12 text-center md:text-left">
+          <h2 className="font-display text-4xl md:text-5xl text-white">
             <span>Explore </span>
             <span className="text-goooey-yellow">
-              Our <br /> Favourite{" "}
+              Our <br className="hidden md:block" /> Favourite{" "}
             </span>
             <span>Taste</span>
           </h2>
-          <p className="text-white text-right max-w-xs leading-relaxed max-sm:text-center">
+          <p className="text-white md:text-right max-w-xs leading-relaxed text-center">
             Explore our mouthwatering menu filled with flavourful options to
             satisfy every craving.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 w-full">
           {products.map((product, index) => (
             <div
               key={index}
-              className="flex justify-center items-center relative h-[505px] rounded-[42px] mx-8 text-center space-y-6 overflow-hidden 
+              className="flex justify-center items-center relative h-[380px] md:h-[505px] w-full rounded-[42px] text-center space-y-6 overflow-hidden 
                  transition-transform duration-300 hover:scale-105 group"
             >
               {/* Hover White Background from Bottom */}
@@ -248,7 +248,7 @@ function PacksSection() {
         alt="Treat Left Top"
         width={210}
         height={210}
-        className="absolute left-6 top-24 rotate-[-10deg] drop-shadow-xl"
+        className="absolute left-6 top-24 rotate-[-10deg] drop-shadow-xl hidden md:block"
       />
 
       <img
@@ -256,7 +256,7 @@ function PacksSection() {
         alt="Treat Right Top"
         width={210}
         height={210}
-        className="absolute right-6 top-24 rotate-[10deg] drop-shadow-xl"
+        className="absolute right-6 top-24 rotate-[10deg] drop-shadow-xl hidden md:block"
       />
 
       <img
@@ -264,7 +264,7 @@ function PacksSection() {
         alt="Treat Left Bottom"
         width={220}
         height={220}
-        className="absolute left-10 bottom-32 rotate-[5deg] drop-shadow-xl"
+        className="absolute left-10 bottom-32 rotate-[5deg] drop-shadow-xl hidden lg:block"
       />
 
       <img
@@ -272,12 +272,12 @@ function PacksSection() {
         alt="Treat Right Bottom"
         width={200}
         height={200}
-        className="absolute right-10 bottom-36 rotate-[-5deg] drop-shadow-xl"
+        className="absolute right-10 bottom-36 rotate-[-5deg] drop-shadow-xl hidden lg:block"
       />
 
       {/* Background Gooey Outline */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.08] pointer-events-none">
-        <h1 className="font-display text-[20rem] text-transparent text-outline-gooey select-none leading-none">
+        <h1 className="font-display text-[8rem] sm:text-[12rem] md:text-[20rem] text-transparent text-outline-gooey select-none leading-none">
           GOOEY
         </h1>
       </div>
@@ -309,13 +309,13 @@ function PacksSection() {
         </button>
 
         {/* Packaging Image */}
-        <div className="relative mt-20">
+        <div className="relative mt-12 md:mt-20">
           <img
             src={packs}
             alt="Goooey Packs"
             width={1100}
             height={700}
-            className="mx-auto drop-shadow-2xl"
+            className="mx-auto drop-shadow-2xl max-w-full h-auto"
           />
         </div>
       </div>
@@ -446,14 +446,14 @@ function ReviewsSection() {
 
   return (
     <section className="relative bg-goooey-blue py-32 overflow-hidden">
-        {/* Bottom Drip */}
+      {/* Bottom Drip */}
       <div className="absolute top-0 left-0 w-full pointer-events-none">
         <img
           src={dripBottom}
           alt="Drip Deco"
           width={2000}
           height={400}
-          className="w-full"
+          className="w-full object-cover min-h-[40px] md:min-h-[100px]"
         />
       </div>
       <div className="container mx-auto px-6 pt-10 mt-14">

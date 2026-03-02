@@ -39,7 +39,7 @@ function StorySection() {
           </h2>
         </div>
 
-        <p className="text-white font-bold text-2xl md:text-3xl text-center max-w-4xl mx-auto mb-16 leading-tight">
+        <p className="text-white font-bold text-xl md:text-2xl lg:text-3xl text-center max-w-4xl mx-auto mb-16 leading-tight">
           Goooey Treats isn't just a snack, it's an experience! Founded by Mich
           Vital, a passionate entrepreneur with a vision to create the gooiest,
           most delicious treats, Goooey has grown into a must-have brand for
@@ -51,12 +51,12 @@ function StorySection() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/9322253434d988a2df693e52d4ba65caa5d957d6?width=876"
               alt="Goooey founder"
-              className="w-full rounded-[42px] transform -rotate-6 hover:rotate-0 transition-transform"
+              className="w-full rounded-[42px] transform md:-rotate-6 hover:rotate-0 transition-transform"
             />
           </div>
 
           <div className="space-y-6">
-            <p className="text-white text-lg leading-relaxed">
+            <p className="text-white text-base md:text-lg leading-relaxed">
               <span className="font-normal">Alongside her family </span>
               <span className="font-bold">
                 Sky Directs, Chaysun Sky, and Brysun Palmer
@@ -109,7 +109,7 @@ function StorySection() {
 
 function WhyGoooeySection() {
   return (
-    <section className="relative bg-goooey-cream py-32 overflow-hidden">
+    <section className="relative bg-goooey-cream py-20 md:py-32 overflow-hidden">
       <svg
         className="absolute top-0 left-0 w-full opacity-20"
         viewBox="0 0 1440 496"
@@ -135,7 +135,7 @@ function WhyGoooeySection() {
               </h3>
             </div>
 
-            <div className="space-y-4 text-lg leading-relaxed">
+            <div className="space-y-4 text-base md:text-lg leading-relaxed">
               <p>
                 <span className="font-bold">Handcrafted with Love </span>
                 <span>
@@ -172,16 +172,16 @@ function WhyGoooeySection() {
             </button>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-6 mt-10 md:mt-0">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/4f51dfdcd4036b27c251ff76a3f96be1ee66b694?width=848"
               alt="Goooey treats variety"
-              className="w-full rounded-[42px]  transform rotate-6 hover:rotate-0 transition-transform "
+              className="w-full rounded-[42px] transform md:rotate-6 hover:rotate-0 transition-transform "
             />
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/15ecb0aad294f76d19893f75b1dfdbb8f94038f3?width=738"
               alt="Making treats"
-              className="w-3/4 ml-auto rounded-[42px] transform -rotate-6 hover:rotate-0 transition-transform"
+              className="w-[85%] md:w-3/4 ml-auto rounded-[42px] transform md:-rotate-6 hover:rotate-0 transition-transform"
             />
           </div>
         </div>
@@ -227,9 +227,9 @@ function MeetFoundersSection() {
   ];
 
   return (
-    <section className="relative bg-goooey-blue py-32 overflow-hidden">
+    <section className="relative bg-goooey-blue py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="font-bold text-5xl md:text-6xl text-white uppercase mb-2">
             meet the
           </h2>
@@ -259,9 +259,9 @@ function MeetFoundersSection() {
 
 function FinalMessageSection() {
   return (
-    <section className="relative bg-goooey-blue py-32">
+    <section className="relative bg-goooey-blue py-20 md:py-32">
       <div className="container mx-auto px-6 text-center max-w-4xl">
-        <h2 className="font-display text-4xl md:text-5xl mb-12 leading-tight">
+        <h2 className="font-display text-3xl md:text-5xl mb-12 leading-tight">
           <span className="text-white">
             From a simple kitchen creation to a{" "}
           </span>
