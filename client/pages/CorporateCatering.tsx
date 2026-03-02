@@ -23,16 +23,16 @@ function HeroSection() {
       />
       <div className="absolute inset-0 bg-goooey-blue/60"></div>
 
-      <div className="relative z-10 container mx-auto px-6 py-32 flex flex-col items-center justify-center min-h-[600px]">
+      <div className="relative z-10 container mx-auto px-6 py-20 md:py-32 flex flex-col items-center justify-center min-h-[400px] md:min-h-[600px]">
         <p className="text-white font-display text-base md:text-lg mb-2">
           make your event
         </p>
         <div className="text-center">
-          <h1 className="font-extrabold text-5xl md:text-6xl lg:text-5xl text-white text-stroke-black uppercase leading-tight">
+          <h1 className="font-extrabold text-4xl md:text-6xl lg:text-7xl text-white text-stroke-black uppercase leading-tight">
             extra sweet
             <br />
             with{" "}
-            <span className="font-display text-5xl md:text-6xl lg:text-5xl text-goooey-cream text-stroke-black">
+            <span className="font-display text-4xl md:text-6xl lg:text-7xl text-goooey-cream text-stroke-black">
               Goooey
             </span>
           </h1>
@@ -73,7 +73,7 @@ function IntroSection() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto mb-16 md:mb-24">
-          <p className="text-2xl md:text-3xl font-bold text-[#654800] leading-tight text-left">
+          <p className="text-xl md:text-2xl lg:text-3xl font-bold text-[#654800] leading-tight text-left md:text-center">
             Goooey Treats aren't just snacks—they're the highlight of any event!
             Whether you're hosting a corporate retreat, movie premieres, team
             celebration, or VIP event, our fresh, ooey-gooey treats make every
@@ -84,11 +84,11 @@ function IntroSection() {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           <div className="space-y-8 order-2 md:order-1">
             <div>
-              <h3 className="text-4xl md:text-5xl mb-6 leading-tight">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight">
                 <span className="font-extrabold text-black">
                   Why Choose <br /> Goooey for{" "}
                 </span>
-                <br />
+                <br className="md:hidden" />
                 <span className="font-display text-goooey-blue">Catering?</span>
               </h3>
             </div>
@@ -200,26 +200,25 @@ function HowItWorksSection() {
             {steps.map((step, index) => (
               <div
                 key={step.number}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
               >
                 <div className="flex-1 flex justify-center">
                   <div className="relative">
-                    <div className="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white bg-goooey-cream flex items-center justify-center p-12 md:p-16 shadow-xl">
+                    <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-4 border-white bg-goooey-cream flex items-center justify-center p-8 md:p-12 lg:p-16 shadow-xl">
                       <div className="text-center space-y-4 md:space-y-6">
-                        <h3 className="text-3xl md:text-4xl font-extrabold text-white text-stroke-black leading-tight uppercase">
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white text-stroke-black leading-tight uppercase">
                           {step.title}
                         </h3>
                         {step.description && (
-                          <p className="text-sm md:text-base font-semibold text-black leading-tight">
+                          <p className="text-xs md:text-sm lg:text-base font-semibold text-black leading-tight">
                             {step.description}
                           </p>
                         )}
                       </div>
 
                       {step.hasEffects && (
-                        <div className="absolute inset-0 opacity-50 pointer-events-none">
+                        <div className="absolute inset-0 opacity-50 pointer-events-none hidden md:block">
                           <div className="absolute w-3 h-3 bg-[#FFE33F] rounded-full top-16 left-24"></div>
                           <div className="absolute w-3 h-3 bg-[#FFE33F] rounded-full top-20 left-52"></div>
                           <div className="absolute w-3 h-3 bg-[#86D520] rounded-full top-24 left-72"></div>
@@ -349,9 +348,8 @@ function FAQSection() {
                   </span>
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-[0_1.5px_0_0_#000]">
                     <svg
-                      className={`w-6 h-6 transition-transform ${
-                        openIndex === index ? "rotate-90" : ""
-                      }`}
+                      className={`w-6 h-6 transition-transform ${openIndex === index ? "rotate-90" : ""
+                        }`}
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="black"
@@ -370,9 +368,8 @@ function FAQSection() {
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? "max-h-96 mt-6" : "max-h-0"
-                }`}
+                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 mt-6" : "max-h-0"
+                  }`}
               >
                 <p className="text-[#191919] text-center font-medium text-base md:text-lg leading-relaxed px-4">
                   {faq.answer}

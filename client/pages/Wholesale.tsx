@@ -30,7 +30,7 @@ function HeroSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto text-center">
-        <h1 className="font-display text-5xl md:text-6xl text-goooey-cream text-stroke-black">
+        <h1 className="font-display text-5xl md:text-6xl text-goooey-cream text-stroke-black mb-6">
           Wholesale
         </h1>
         <p className="text-white text-base md:text-lg leading-relaxed max-w-xl mx-auto">

@@ -24,12 +24,12 @@ function HeroSection() {
       />
       <div className="absolute inset-0 bg-[#D10E03]/50"></div>
 
-      <div className="relative z-10 container mx-auto px-6 py-32 flex flex-col items-center justify-center min-h-[600px]">
+      <div className="relative z-10 container mx-auto px-6 py-20 md:py-32 flex flex-col items-center justify-center min-h-[400px] md:min-h-[600px]">
         <p className="text-white font-display text-sm md:text-base mb-2 text-stroke-light text-center">
           Turn your city into a goooey destination
         </p>
         <div className="text-center max-w-2xl">
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-goooey-blue text-stroke-white mb-6">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-goooey-blue text-stroke-white mb-4 md:mb-6">
             Franchise
           </h1>
           <p className="text-white text-base md:text-lg font-semibold leading-relaxed">
@@ -89,7 +89,7 @@ function IntroSection() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto mb-16 md:mb-24">
-          <p className="text-2xl md:text-3xl font-bold text-[#654800] leading-tight text-left">
+          <p className="text-xl md:text-2xl lg:text-3xl font-bold text-[#654800] leading-tight text-center md:text-left">
             Goooey Treats aren't just snacks—they're the highlight of any event!
             Whether you're hosting a corporate retreat, movie premieres, team
             celebration, or VIP event, our fresh, ooey-gooey treats make every
@@ -100,11 +100,11 @@ function IntroSection() {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           <div className="space-y-8 order-2 md:order-1">
             <div>
-              <h3 className="text-4xl md:text-5xl mb-6 leading-tight">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-center md:text-left">
                 <span className="font-extrabold text-black">
                   Why Choose Goooey for{" "}
                 </span>
-                <span className="font-display text-goooey-blue">
+                <span className="font-display text-goooey-blue block md:inline mt-2 md:mt-0">
                   Franchise?
                 </span>
               </h3>
@@ -224,12 +224,12 @@ function FAQSection() {
           strokeWidth="9"
         />
       </svg>
-      <div className="container mt-32 mx-auto px-6 relative z-10">
+      <div className="container mt-20 md:mt-32 mx-auto px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white uppercase mb-2">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase mb-2">
             common
           </h2>
-          <h3 className="font-display text-4xl md:text-5xl text-goooey-cream text-stroke-small">
+          <h3 className="font-display text-4xl md:text-5xl lg:text-6xl text-goooey-cream text-stroke-small">
             Questions
           </h3>
         </div>
@@ -250,9 +250,8 @@ function FAQSection() {
                   </span>
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-[0_1.5px_0_0_#000]">
                     <svg
-                      className={`w-6 h-6 transition-transform ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
+                      className={`w-6 h-6 transition-transform ${openIndex === index ? "rotate-180" : ""
+                        }`}
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="black"
@@ -267,9 +266,8 @@ function FAQSection() {
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? "max-h-96 mt-6" : "max-h-0"
-                }`}
+                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 mt-6" : "max-h-0"
+                  }`}
               >
                 <p className="text-[#191919] text-center font-medium text-base md:text-lg leading-relaxed px-4">
                   {faq.answer}
@@ -300,11 +298,11 @@ function BottomCTASection() {
           </svg>
 
           <div className="flex flex-col items-center gap-8 md:gap-12 py-16 md:py-24">
-            <div className="relative -mt-20 md:-mt-32">
+            <div className="relative -mt-16 sm:-mt-20 md:-mt-32">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/9f1d978bfea6887b180f733e2f8e23b907499915?width=561"
                 alt="Goooey treats"
-                className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain transform -rotate-[23deg] animate-pulse"
+                className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain transform -rotate-[23deg] animate-pulse"
               />
             </div>
 
@@ -313,7 +311,7 @@ function BottomCTASection() {
                 Turn your city into a goooey destination
               </p>
 
-              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-goooey-blue text-stroke-white">
+              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-goooey-blue text-stroke-white">
                 Franchise
               </h2>
 

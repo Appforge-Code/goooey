@@ -20,9 +20,9 @@ function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-goooey-blue/60"></div>
-      
-      <div className="relative z-10 container mx-auto px-6 py-32 flex items-center justify-center min-h-[600px]">
-        <h1 className="font-display text-6xl md:text-7xl text-goooey-blue text-stroke-white uppercase text-center">
+
+      <div className="relative z-10 container mx-auto px-6 py-20 md:py-32 flex items-center justify-center min-h-[400px] md:min-h-[600px]">
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-goooey-blue text-stroke-white uppercase text-center">
           Fundraising
         </h1>
       </div>
@@ -60,12 +60,12 @@ function IntroSection() {
       </svg>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-5xl mx-auto mb-20">
-          <h2 className="font-extrabold text-5xl md:text-4xl text-goooey-blue text-stroke-white uppercase mb-12 text-left">
-            THE SWEETEST WAY TO <br/> RAISE MONEY!
+        <div className="max-w-5xl mx-auto mb-16 md:mb-20">
+          <h2 className="font-extrabold text-4xl md:text-5xl lg:text-6xl text-goooey-blue text-stroke-white uppercase mb-8 md:mb-12 text-center md:text-left">
+            THE SWEETEST WAY TO <br className="hidden md:block" /> RAISE MONEY!
           </h2>
 
-          <p className="text-3xl md:text-4xl font-bold text-[#654800] leading-tight text-left mb-16">
+          <p className="text-xl md:text-2xl lg:text-3xl font-bold text-[#654800] leading-tight text-center md:text-left mb-12 md:mb-16">
             Want to raise BIG money in a fun and delicious way? Say goodbye to boring
             carwashes and cookie-cutter fundraisers—Goooey Treats is here to make your
             fundraising easy, exciting, and most importantly, profitable! Perfect for
@@ -78,9 +78,9 @@ function IntroSection() {
         <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           <div className="space-y-8">
             <div>
-              <h3 className="text-5xl mb-4 uppercase">
-                <span className="font-extrabold text-black">Why Choose <br/> Goooey for </span>
-                <br/>
+              <h3 className="text-4xl md:text-5xl lg:text-6xl mb-4 uppercase">
+                <span className="font-extrabold text-black">Why Choose <br className="hidden md:block" /> Goooey for </span>
+                <br />
                 <span className="font-display text-goooey-blue">Fundraising?</span>
               </h3>
             </div>
@@ -173,7 +173,7 @@ function HowItWorksSection() {
       </svg>
 
       <div className="container mx-auto px-6 relative z-10">
-        
+
         <div className="max-w-5xl mx-auto relative">
           <div className="absolute left-1/2 top-0 bottom-0 w-2.5 bg-white rounded-full transform -translate-x-1/2 hidden md:block"></div>
           <div className="absolute left-1/2 top-0 h-20 w-2.5 bg-goooey-cream rounded-full transform -translate-x-1/2 hidden md:block"></div>
@@ -182,24 +182,23 @@ function HowItWorksSection() {
             {steps.map((step, index) => (
               <div
                 key={step.number}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
               >
                 <div className="flex-1 flex justify-center">
                   <div className="relative">
-                    <div className="w-96 h-96 rounded-full border-4 border-white bg-goooey-cream flex items-center justify-center p-16 shadow-xl">
-                      <div className="text-center space-y-6">
-                        <h3 className="text-3xl md:text-4xl font-extrabold text-white text-stroke-black leading-tight uppercase">
+                    <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full border-4 border-white bg-goooey-cream flex items-center justify-center p-8 md:p-12 lg:p-16 shadow-xl">
+                      <div className="text-center space-y-4 md:space-y-6">
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white text-stroke-black leading-tight uppercase">
                           {step.title}
                         </h3>
-                        <p className="text-base font-semibold text-black leading-tight">
+                        <p className="text-sm lg:text-base font-semibold text-black leading-tight">
                           {step.description}
                         </p>
                       </div>
 
                       {step.hasEffects && (
-                        <div className="absolute inset-0 opacity-50 pointer-events-none">
+                        <div className="absolute inset-0 opacity-50 pointer-events-none hidden md:block">
                           <div className="absolute w-3 h-3 bg-[#FFE33F] rounded-full top-16 left-24"></div>
                           <div className="absolute w-3 h-3 bg-[#FFE33F] rounded-full top-20 left-52"></div>
                           <div className="absolute w-3 h-3 bg-[#86D520] rounded-full top-24 left-72"></div>
